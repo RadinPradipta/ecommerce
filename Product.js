@@ -1,3 +1,6 @@
+
+// Implementasikan kelas Produk dan Kategori dengan properti dan metode yang sudah ditentukan.
+// Pastikan bahwa sebuah produk dapat termasuk dalam beberapa kategori, dan implementasikan mekanisme untuk mengelola asosiasi ini.
 export default class Product {
   constructor(productId, productName, price, description) {
     this.productId = productId;

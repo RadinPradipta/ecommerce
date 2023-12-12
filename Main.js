@@ -1,6 +1,7 @@
 import Product from "./Product.js";
 import Category from "./Category.js";
 import Cart from "./Cart.js";
+import Order from "./Order.js";
 
 //Create Category instances
 const dairy = new Category(1, "Dairy");
@@ -13,8 +14,11 @@ const p2 = new Product(2, "Milk", 12500, "Healthy milk");
 //Create a Cart instance
 const keranjang = new Cart(1);
 
-dairy.addProduct(p2);
-
-dairy.products();
-
-//Push
+//Add 5 items of p1 to keranjang
+keranjang.addItem(p1, 5);
+keranjang.addItem(p2, 3);
+//Create order instance
+const order = new Order(1);
+//Add
+order.createOrder(keranjang);
+order.displayOrderDetails();
