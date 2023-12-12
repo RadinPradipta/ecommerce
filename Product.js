@@ -1,4 +1,4 @@
-class Product {
+export default class Product {
   constructor(productId, productName, price, description) {
     this.productId = productId;
     this.productName = productName;
@@ -7,7 +7,7 @@ class Product {
   }
 
   toString() {
-    return `${this.productId} ${this.productName} ${this.price} ${this.description}`;
+    return `${this.productName} Price: ${this.price} Desc: ${this.description}`;
   }
 
   displayInfo() {
