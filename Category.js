@@ -4,15 +4,11 @@ export default class Category {
   constructor(categoryId, categoryName) {
     this.categoryName = categoryName;
     this.categoryId = categoryId;
-    this.items = [];
+    this.products = [];
   }
 
   displayInfo = () => {
     return `Kategori: ${this.categoryName}`;
-  };
-
-  addProduct = (product) => {
-    this.items.push(product);
   };
 
   updateCategory = (name, id) => {
@@ -20,11 +16,14 @@ export default class Category {
     this.categoryId = id;
   };
 
-  products = () => {
-    console.log(`List of Product in ${this.categoryName} :`);
-    for (const key in this.items) {
-      const p = this.items[key];
-      p.displayInfo();
+  addProduct(product) {
+    this.products.push(product);
+  }
+
+  printProducts() {
+    console.log(`Produk dalam kategori ${this.categoryName}:`);
+    for (const product of this.products) {
+      product.displayInfo();
     }
-  };
+  }
 }

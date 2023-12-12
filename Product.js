@@ -1,4 +1,3 @@
-
 // Implementasikan kelas Produk dan Kategori dengan properti dan metode yang sudah ditentukan.
 // Pastikan bahwa sebuah produk dapat termasuk dalam beberapa kategori, dan implementasikan mekanisme untuk mengelola asosiasi ini.
 export default class Product {
@@ -7,6 +6,7 @@ export default class Product {
     this.productName = productName;
     this.price = price;
     this.description = description;
+    this.categories = [];
   }
 
   toString() {
@@ -22,5 +22,10 @@ export default class Product {
     this.productName = product.productName;
     this.price = product.price;
     this.description = product.description;
+  }
+
+  addCategory(category) {
+    this.categories.push(category);
+    category.addProduct(this);
   }
 }
